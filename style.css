@@ -1,0 +1,492 @@
+/* Reset & Variables */
+* {
+  margin: 0;
+  border-radius: 10px;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+:root {
+  --primary-color: #1c4b82; /* Deep Blue */
+  --secondary-color: #2e8b57; /* Sea Green */
+  --text-dark: #333;
+  --text-light: #777;
+  --bg-light: #f9f9f9;
+  --white: #ffffff;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  line-height: 1.6;
+  color: var(--text-dark);
+}
+
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Header */
+header {
+  background: var(--white);
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.header-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 0;
+}
+
+.logo h2 {
+  color: var(--primary-color);
+  font-size: 24px;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: var(--text-dark);
+  font-weight: 500;
+  transition: color 0.3s;
+}
+
+.nav-links a:hover {
+  color: var(--secondary-color);
+}
+
+.hamburger {
+  display: none;
+  font-size: 24px;
+  cursor: pointer;
+}
+
+/* Hero Section */
+.hero {
+  height: 80vh;
+  background:
+    linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
+    url("./images/homepic.jpg") no-repeat center/cover;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: var(--white);
+}
+
+.hero-content h1 {
+  font-size: 3rem;
+  margin: 15px 0;
+  max-width: 800px;
+}
+
+.rera {
+  font-size: 1.1rem;
+  margin-bottom: 30px;
+  color: #e0e0e0;
+}
+
+.btn {
+  display: inline-block;
+  padding: 12px 30px;
+  background: var(--secondary-color);
+  color: var(--white);
+  text-decoration: none;
+  border-radius: 5px;
+  font-weight: bold;
+  transition: background 0.3s;
+}
+
+.btn:hover {
+  background: #236b43;
+}
+
+.btn-outline {
+  background: transparent;
+  border: 2px solid var(--white);
+}
+
+.btn-outline:hover {
+  background: var(--white);
+  color: var(--primary-color);
+}
+
+/* Sections General */
+.section {
+  padding: 80px 0;
+}
+
+.bg-light {
+  background-color: var(--bg-light);
+}
+
+.section-title {
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.section-title h2 {
+  font-size: 2.5rem;
+  color: var(--primary-color);
+  margin-bottom: 10px;
+}
+
+.section-title p {
+  color: var(--secondary-color);
+  font-weight: bold;
+}
+
+/* About Section */
+.about-text {
+  font-size: 1.1rem;
+  text-align: center;
+  max-width: 900px;
+  margin: 0 auto 20px auto;
+  color: var(--text-light);
+}
+
+/* Property Section Styles */
+.property-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  gap: 40px;
+}
+
+.property-card {
+  background: var(--white);
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+  transition: transform 0.3s ease;
+}
+
+.property-card:hover {
+  transform: translateY(-8px);
+}
+
+.property-img img {
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
+  display: block;
+}
+
+.property-info {
+  padding: 30px;
+}
+
+.property-info h3 {
+  color: var(--primary-color);
+  margin-bottom: 10px;
+  font-size: 1.4rem;
+}
+
+.property-info p {
+  color: var(--text-light);
+  margin-bottom: 20px;
+  font-size: 0.95rem;
+}
+
+.property-features {
+  list-style: none;
+  margin-bottom: 25px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+  border-top: 1px solid #eee;
+  padding-top: 20px;
+}
+
+.property-features li {
+  font-size: 0.9rem;
+  color: var(--text-dark);
+  font-weight: 500;
+}
+
+.property-features i {
+  color: var(--secondary-color);
+  margin-right: 5px;
+}
+
+/* Amenities */
+.amenities-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 30px;
+}
+
+.amenity-card {
+  background: var(--white);
+  padding: 30px;
+  text-align: center;
+  border-radius: 10px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+  transition: transform 0.3s;
+}
+
+.amenity-card:hover {
+  transform: translateY(-5px);
+}
+
+.amenity-card i {
+  font-size: 40px;
+  color: var(--secondary-color);
+  margin-bottom: 15px;
+}
+
+/* Why Us */
+.why-us-list {
+  list-style: none;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.why-us-list li {
+  font-size: 1.1rem;
+  margin-bottom: 15px;
+  display: flex;
+  align-items: flex-start;
+  gap: 15px;
+}
+
+.why-us-list i {
+  color: var(--secondary-color);
+  margin-top: 5px;
+}
+
+/* =========================================
+   UPDATED: Testimonials / Group Members
+   ========================================= */
+.testimonials-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 30px;
+}
+
+.testimonial-card {
+  background: var(--white);
+  padding: 40px 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+  font-style: italic;
+  color: var(--text-light);
+  text-align: center;
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+.testimonial-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+}
+
+.member-photo {
+  width: 150px;
+  height: 150px;
+  border-radius: 10%;
+  object-fit: cover;
+  margin: 0 auto 20px auto;
+  display: block;
+  border: 4px solid var(--bg-light); /* Uses your background grey */
+}
+
+.testimonial-card h4 {
+  margin-top: 20px;
+  font-style: normal;
+  color: var(--primary-color);
+  font-size: 18px;
+}
+
+/* =========================================
+   Fixed Right Side CTA 
+   ========================================= */
+.fixed-right-cta {
+  position: fixed;
+  top: 50%;
+  right: 0;
+  transform: translateY(-50%);
+  z-index: 9999; /* Ensures it stays on top of everything */
+}
+
+.enquire-btn-fixed {
+  display: block;
+  background-color: #2e8b57; /* Change this to match your theme's button color */
+  color: #ffffff;
+  padding: 15px 12px;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 16px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  border-radius: 8px 0 0 8px; /* Rounds the left corners */
+  box-shadow: -3px 0 10px rgba(0, 0, 0, 0.2);
+  transition: all 0.3s ease;
+
+  /* Turns the text sideways */
+  writing-mode: vertical-rl;
+  text-orientation: mixed;
+}
+
+.enquire-btn-fixed:hover {
+  background-color: #0056b3; /* Darker hover color */
+  color: #ffffff;
+  padding-right: 20px; /* Creates a slight slide-out animation on hover */
+}
+
+/* Footer with Background Image */
+.footer-bg {
+  background:
+    linear-gradient(rgba(17, 24, 39, 0.9), rgba(17, 24, 39, 0.95)),
+    url("https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=1600&q=80")
+      center/cover no-repeat;
+  color: #e2e8f0;
+  padding: 70px 0 20px;
+}
+
+.footer-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 40px;
+  margin-bottom: 40px;
+}
+
+.footer-grid h3 {
+  color: var(--white);
+  margin-bottom: 20px;
+  font-size: 1.3rem;
+}
+
+.footer-links ul {
+  list-style: none;
+}
+
+.footer-links a {
+  color: #cbd5e1;
+  text-decoration: none;
+  display: block;
+  margin-bottom: 10px;
+  transition: color 0.3s;
+}
+
+.footer-links a:hover {
+  color: var(--secondary-color);
+}
+
+.footer-contact p {
+  margin-bottom: 15px;
+  display: flex;
+  gap: 15px;
+  align-items: center;
+}
+
+.footer-contact i {
+  color: var(--secondary-color);
+}
+
+.copyright {
+  text-align: center;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  padding-top: 20px;
+  font-size: 0.9rem;
+  color: #94a3b8;
+}
+
+/* =========================================
+   Social Media Section & Icons
+   ========================================= */
+#social {
+  padding: 60px 0;
+  /* Outer background behind the container */
+  background-color: var(--bg-light, #f9f9f9);
+}
+
+/* This creates the visual "card" container */
+#social .container {
+  background-color: #ffffff;
+  padding: 40px 30px;
+  border-radius: 15px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+  max-width: 800px; /* Keeps the box from stretching too wide */
+  margin: 0 auto;
+  text-align: center;
+}
+
+#social h3 {
+  font-size: 2rem;
+  color: var(--primary-color);
+  margin-bottom: 25px;
+}
+
+.social-links {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  margin-top: 10px;
+}
+
+.social-icon {
+  font-size: 1.8rem;
+  color: var(--text-dark);
+  background-color: var(
+    --bg-light,
+    #f4f4f4
+  ); /* Light background for the icon circle */
+  width: 60px;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%; /* Makes the icons circular */
+  transition: all 0.3s ease;
+  text-decoration: none;
+}
+
+.social-icon:hover {
+  color: #ffffff;
+  background-color: #2e8b57; /* Change this to your preferred hover color */
+  transform: translateY(-5px) scale(1.1);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 768px) {
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+    position: absolute;
+    top: 70px;
+    left: 0;
+    background: var(--white);
+    padding: 20px 0;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+  }
+
+  .nav-links.active {
+    display: flex;
+  }
+
+  .hamburger {
+    display: block;
+  }
+
+  .hero-content h1 {
+    font-size: 2rem;
+  }
+}
