@@ -71,7 +71,7 @@ h2 { margin-bottom: 20px; color: var(--navy); font-size: clamp(2.2rem, 5vw, 4.25
 .menu-button { display: none; }
 .mobile-nav { display: none; }
 
-.hero { position: relative; min-height: 760px; display: grid; align-items: center; overflow: hidden; background: url("assets/hero-real-estate.png") center/cover; color: var(--white); }
+.hero { position: relative; min-height: 760px; display: grid; align-items: center; overflow: hidden; background: url("hero-real-estate.png") center/cover; color: var(--white); }
 .hero-shade { position: absolute; inset: 0; background: linear-gradient(90deg, rgba(2,17,29,.94) 0%, rgba(3,22,36,.76) 46%, rgba(3,20,32,.25) 100%); }
 .hero-content { position: relative; padding-top: 70px; }
 .hero-kicker { display: inline-flex; align-items: center; gap: 8px; color: var(--gold-light); font-size: .78rem; font-weight: 800; letter-spacing: .05em; text-transform: uppercase; }
@@ -377,7 +377,7 @@ input:focus, select:focus, textarea:focus { border-color: var(--gold); box-shado
 }
 
 /* Dedicated Team and Service Area pages */
-.subpage-hero { min-height: 520px; padding: 150px 0 80px; display: flex; align-items: center; background: linear-gradient(90deg, rgba(2,17,29,.96), rgba(3,22,36,.72)), url("assets/hero-real-estate.png") center/cover; color: var(--white); }
+.subpage-hero { min-height: 520px; padding: 150px 0 80px; display: flex; align-items: center; background: linear-gradient(90deg, rgba(2,17,29,.96), rgba(3,22,36,.72)), url("hero-real-estate.png") center/cover; color: var(--white); }
 .subpage-hero-inner { max-width: 900px; margin-left: max(20px, calc((100vw - 1180px) / 2)); margin-right: auto; }
 .subpage-hero h1 { max-width: 850px; margin-bottom: 18px; font-size: clamp(3rem, 7vw, 5.8rem); }
 .subpage-hero p:not(.eyebrow) { max-width: 690px; color: rgba(255,255,255,.72); }
