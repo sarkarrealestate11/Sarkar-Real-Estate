@@ -1,0 +1,359 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Meet Sujoy Sarkar, owner of Sarkar Real Estate, serving Kalyani and Nadia District."
+    />
+    <title>Our Team | Sarkar Real Estate</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="loader" id="loader" aria-hidden="true"><span></span></div>
+    <header class="site-header scrolled" id="siteHeader">
+      <div class="container header-inner">
+        <a class="brand" href="index.html"
+          ><img src="assets/logo.png" alt="Sarkar Real Estate logo"
+        /></a>
+        <nav class="desktop-nav" aria-label="Main navigation">
+          <a href="index.html">Home</a
+          ><a class="active-page" href="team.html">Team</a>
+          <div class="nav-dropdown">
+            <button type="button">
+              About <i class="fa-solid fa-chevron-down"></i>
+            </button>
+            <div class="dropdown-panel">
+              <a href="team.html">About Owner</a
+              ><a href="index.html#testimonials">Testimonials</a
+              ><a href="index.html#faq">FAQ</a>
+            </div>
+          </div>
+          <div class="nav-dropdown">
+            <button type="button">
+              Services <i class="fa-solid fa-chevron-down"></i>
+            </button>
+            <div class="dropdown-panel">
+              <a href="index.html#services">What We Do</a
+              ><a href="area.html">Areas We Serve</a
+              ><a href="index.html#post-property">Post Property</a>
+            </div>
+          </div>
+          <a href="index.html#properties">Buy / Rent</a
+          ><a href="index.html#contact">Contact</a>
+        </nav>
+        <div class="header-actions">
+          <a
+            class="icon-button"
+            href="index.html#searchSection"
+            aria-label="Open property search"
+            ><i class="fa-solid fa-magnifying-glass"></i></a
+          ><a class="header-cta" href="index.html#post-property"
+            >Post Property</a
+          ><button
+            class="menu-button"
+            id="menuButton"
+            aria-label="Open menu"
+            aria-expanded="false"
+          >
+            <i class="fa-solid fa-bars"></i>
+          </button>
+        </div>
+      </div>
+      <div class="mobile-nav" id="mobileNav">
+        <a href="index.html">Home</a><a href="team.html">Team</a
+        ><a href="index.html#services">Services</a><a href="area.html">Areas</a
+        ><a href="index.html#properties">Buy / Rent</a
+        ><a href="index.html#post-property">Post Property</a
+        ><a href="index.html#contact">Contact</a>
+      </div>
+    </header>
+
+    <main>
+      <section class="subpage-hero">
+        <div class="container subpage-hero-inner reveal">
+          <p class="eyebrow light">Our Team</p>
+          <h1>Meet the owner of Sarkar Real Estate.</h1>
+          <p>
+            The owner profile, service focus and direct contact information are
+            available on this dedicated page.
+          </p>
+          <div>
+            <a class="button gold" href="tel:+917439632507"
+              ><i class="fa-solid fa-phone"></i>Call Owner</a
+            ><a class="button outline-light" href="index.html">Back to Home</a>
+          </div>
+        </div>
+      </section>
+
+      <section class="section owner-profile-section">
+        <div class="container owner-profile-grid">
+          <div class="owner-photo-card reveal">
+            <!-- Add the real owner photograph at assets/owner-photo.jpg. The fallback stays visible until that file is added. -->
+            <img
+              class="owner-photo"
+              src="assets/owner-photo.png"
+              alt="Sujoy Sarkar, Owner of Sarkar Real Estate"
+              onerror="
+                this.hidden = true;
+                this.nextElementSibling.hidden = false;
+              "
+            />
+
+            <div class="owner-photo-caption">
+              <strong>Sujoy Sarkar</strong
+              ><span>Owner · Sarkar Real Estate</span>
+            </div>
+          </div>
+          <div class="owner-profile-copy reveal">
+            <p class="eyebrow">Owner profile</p>
+            <h2>Sujoy Sarkar</h2>
+            <h3>Owner, Sarkar Real Estate</h3>
+            <p>
+              Sarkar Real Estate provides local assistance for property buying,
+              selling, renting and owner listings across Kalyani and Nadia
+              District, West Bengal.
+            </p>
+            <p>
+              The focus is to make property discovery and coordination easier
+              through clear listing information, direct communication, practical
+              local guidance and organized site visits.
+            </p>
+            <div class="owner-facts">
+              <span
+                ><i class="fa-solid fa-location-dot"></i
+                ><small>Primary market</small
+                ><strong>Kalyani & Nadia District</strong></span
+              ><span
+                ><i class="fa-solid fa-building"></i
+                ><small>Property focus</small
+                ><strong>Residential, Commercial & Land</strong></span
+              ><span
+                ><i class="fa-solid fa-comments"></i><small>Support</small
+                ><strong>Phone, WhatsApp & Website</strong></span
+              >
+            </div>
+            <div class="owner-actions">
+              <a class="button navy" href="tel:+917439632507"
+                ><i class="fa-solid fa-phone"></i>+91 74396 32507</a
+              ><a
+                class="button whatsapp-button"
+                href="https://wa.me/917439632507"
+                target="_blank"
+                rel="noopener"
+                ><i class="fa-brands fa-whatsapp"></i>WhatsApp</a
+              ><a
+                class="button outline-dark"
+                href="mailto:sarkarrealestate11@gmail.com"
+                ><i class="fa-solid fa-envelope"></i>Email</a
+              >
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section owner-expertise-section">
+        <div class="container">
+          <div class="section-head reveal">
+            <div>
+              <p class="eyebrow">Service focus</p>
+              <h2>Property support from enquiry to next steps.</h2>
+            </div>
+            <p>
+              Support is shaped around the actual property requirement,
+              preferred location and practical timeline.
+            </p>
+          </div>
+          <div class="expertise-grid">
+            <article class="reveal">
+              <i class="fa-solid fa-key"></i>
+              <h3>Buying Assistance</h3>
+              <p>
+                Local property discovery and shortlisting based on budget, area
+                and priorities.
+              </p>
+            </article>
+            <article class="reveal">
+              <i class="fa-solid fa-indian-rupee-sign"></i>
+              <h3>Selling Assistance</h3>
+              <p>
+                Clear property presentation, enquiry coordination and owner
+                communication.
+              </p>
+            </article>
+            <article class="reveal">
+              <i class="fa-solid fa-house-user"></i>
+              <h3>Rental Support</h3>
+              <p>
+                Rental homes, flats, shops and offices for owners and tenants.
+              </p>
+            </article>
+            <article class="reveal">
+              <i class="fa-solid fa-map"></i>
+              <h3>Land & Plot</h3>
+              <p>
+                Residential, commercial and agricultural land opportunities
+                across the region.
+              </p>
+            </article>
+            <article class="reveal">
+              <i class="fa-solid fa-calendar-check"></i>
+              <h3>Site Visits</h3>
+              <p>
+                Coordinating suitable visit times with owners, buyers and
+                tenants.
+              </p>
+            </article>
+            <article class="reveal">
+              <i class="fa-solid fa-camera"></i>
+              <h3>Property Listings</h3>
+              <p>
+                Photo-rich public listings with direct phone and WhatsApp
+                enquiry options.
+              </p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section mission-section">
+        <div class="container mission-grid">
+          <article class="reveal">
+            <p class="eyebrow">Mission</p>
+            <h2>Make local property decisions clearer.</h2>
+            <p>
+              Provide accessible property information, responsive coordination
+              and practical assistance so clients can take their next step with
+              greater clarity.
+            </p>
+          </article>
+          <article class="reveal">
+            <p class="eyebrow">Values</p>
+            <ul>
+              <li>
+                <i class="fa-solid fa-check"></i>Transparent communication
+              </li>
+              <li>
+                <i class="fa-solid fa-check"></i>Accurate property presentation
+              </li>
+              <li>
+                <i class="fa-solid fa-check"></i>Respect for owners and
+                customers
+              </li>
+              <li>
+                <i class="fa-solid fa-check"></i>Independent verification before
+                commitment
+              </li>
+              <li>
+                <i class="fa-solid fa-check"></i>Local and responsive support
+              </li>
+            </ul>
+          </article>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container footer-grid">
+        <div class="footer-brand">
+          <a class="footer-logo-panel" href="index.html"
+            ><img src="assets/logo.png" alt="Sarkar Real Estate"
+          /></a>
+          <p>
+            Local real estate assistance and an easy property marketplace for
+            Kalyani and Nadia District.
+          </p>
+          <div class="socials">
+            <a
+              href="https://www.facebook.com/share/1BxqBDmVtk/"
+              target="_blank"
+              rel="noopener"
+              aria-label="Facebook"
+              ><i class="fa-brands fa-facebook-f"></i></a
+            ><a
+              href="https://www.instagram.com/sarkar.real.estate.11/"
+              target="_blank"
+              rel="noopener"
+              aria-label="Instagram"
+              ><i class="fa-brands fa-instagram"></i></a
+            ><a
+              href="https://www.linkedin.com/in/sarkarrealestate11"
+              target="_blank"
+              rel="noopener"
+              aria-label="LinkedIn"
+              ><i class="fa-brands fa-linkedin-in"></i
+            ></a>
+          </div>
+        </div>
+        <div>
+          <h3>Quick Links</h3>
+          <a href="index.html">Home</a><a href="team.html">Team</a
+          ><a href="index.html#properties">Buy / Rent</a
+          ><a href="index.html#contact">Contact</a>
+        </div>
+        <div>
+          <h3>Property Types</h3>
+          <a href="index.html#properties">Flat & Apartment</a
+          ><a href="index.html#properties">Independent House</a
+          ><a href="index.html#properties">Land & Plot</a
+          ><a href="index.html#properties">Commercial</a>
+        </div>
+        <div>
+          <h3>Owner Services</h3>
+          <a href="area.html">Areas We Serve</a
+          ><a href="index.html#post-property">Post Property</a
+          ><a href="team.html">Owner Profile</a>
+        </div>
+        <div>
+          <h3>Contact</h3>
+          <a href="tel:+917439632507">+91 74396 32507</a
+          ><a href="mailto:sarkarrealestate11@gmail.com"
+            >sarkarrealestate11@gmail.com</a
+          ><span>Kalyani, Nadia, West Bengal</span>
+        </div>
+      </div>
+      <div class="container legal-note">
+        <p>
+          <strong>Disclaimer:</strong> Property information and prices must be
+          verified independently. Final legal and financial checks should be
+          completed by qualified professionals.
+        </p>
+        <div>
+          <a href="#">Privacy Policy</a><a href="#">Terms & Conditions</a
+          ><a href="#">Disclaimer</a>
+        </div>
+      </div>
+      <div class="container copyright">
+        <span>© 2026 Sarkar Real Estate. All rights reserved.</span
+        ><span>Designed for Kalyani & Nadia</span>
+      </div>
+    </footer>
+    <a
+      class="floating-call"
+      href="tel:+917439632507"
+      aria-label="Call Sarkar Real Estate"
+      ><i class="fa-solid fa-phone"></i></a
+    ><a
+      class="floating-whatsapp"
+      href="https://wa.me/917439632507"
+      target="_blank"
+      rel="noopener"
+      aria-label="WhatsApp Sarkar Real Estate"
+      ><i class="fa-brands fa-whatsapp"></i></a
+    ><button class="scroll-top" id="scrollTop" aria-label="Scroll to top">
+      <i class="fa-solid fa-arrow-up"></i>
+    </button>
+    <script src="script.js"></script>
+  </body>
+</html>
