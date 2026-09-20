@@ -3,383 +3,1015 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Sarkar Real Estate</title>
-    <link rel="stylesheet" href="style.css" />
-    <!-- FontAwesome for Icons -->
+    <meta
+      name="description"
+      content="Sarkar Real Estate helps clients buy, sell and rent verified properties across Kalyani and Nadia District, West Bengal."
+    />
+    <title>Sarkar Real Estate | Kalyani & Nadia</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@600;700&display=swap"
+      rel="stylesheet"
+    />
     <link
       rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
     />
+    <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <!-- Header / Navigation -->
-    <header>
-      <div class="container header-container">
-        <div class="logo">
-          <h2>Sarkar Real Estate</h2>
-        </div>
-        <nav>
-          <ul class="nav-links">
-            <li><a href="#home">Home</a></li>
-            <li><a href="#about">About</a></li>
-            <li><a href="#property">Property</a></li>
-            <!-- Added Property Link -->
-            <li><a href="#amenities">Amenities</a></li>
-            <li><a href="#why-us">Why Us</a></li>
-            <li><a href="#testimonials">Testimonials</a></li>
-            <li><a href="#contact">Contact</a></li>
-          </ul>
+    <div class="loader" id="loader" aria-hidden="true"><span></span></div>
+
+    <header class="site-header" id="siteHeader">
+      <div class="container header-inner">
+        <a class="brand" href="#home" aria-label="Sarkar Real Estate home">
+          <img src="assets/logo.png" alt="Sarkar Real Estate logo" />
+        </a>
+
+        <nav class="desktop-nav" aria-label="Main navigation">
+          <a href="#home">Home</a>
+          <a href="team.html">Team</a>
+          <div class="nav-dropdown">
+            <button type="button">
+              About <i class="fa-solid fa-chevron-down"></i>
+            </button>
+            <div class="dropdown-panel">
+              <a href="team.html">About Owner</a
+              ><a href="#testimonials">Testimonials</a><a href="#faq">FAQ</a>
+            </div>
+          </div>
+          <div class="nav-dropdown">
+            <button type="button">
+              Services <i class="fa-solid fa-chevron-down"></i>
+            </button>
+            <div class="dropdown-panel">
+              <a href="#services">What We Do</a
+              ><a href="area.html">Areas We Serve</a
+              ><a href="#post-property">Post Property</a>
+            </div>
+          </div>
+          <a href="#properties">Buy / Rent</a>
+          <a href="#contact">Contact</a>
         </nav>
-        <div class="hamburger" id="hamburger">
-          <i class="fas fa-bars"></i>
+
+        <div class="header-actions">
+          <button
+            class="icon-button"
+            id="searchToggle"
+            aria-label="Open property search"
+          >
+            <i class="fa-solid fa-magnifying-glass"></i>
+          </button>
+          <a class="account-link" href="team.html">Owner</a>
+          <a class="header-cta" href="#post-property">Post Property</a>
+          <button
+            class="menu-button"
+            id="menuButton"
+            aria-label="Open menu"
+            aria-expanded="false"
+          >
+            <i class="fa-solid fa-bars"></i>
+          </button>
         </div>
+      </div>
+
+      <div class="mobile-nav" id="mobileNav">
+        <a href="index.html">Home</a><a href="team.html">Team</a
+        ><a href="#about">About</a><a href="#services">Services</a
+        ><a href="area.html">Areas</a><a href="#properties">Buy / Rent</a
+        ><a href="#post-property">Post Property</a
+        ><a href="#testimonials">Testimonials</a><a href="#faq">FAQ</a
+        ><a href="#contact">Contact</a>
       </div>
     </header>
 
-    <!-- Hero Section -->
-    <section id="home" class="hero">
-      <div class="hero-content">
-        <p class="slide-indicator"></p>
-        <h1>Find Your Next Chapter</h1>
-        <h2>Modern home designed for comfort and convenience</h2>
-        <a href="#contact" class="btn">Enquire Now</a>
-      </div>
-    </section>
-
-    <!-- About Section -->
-    <section id="about" class="section about-section">
-      <div class="container">
-        <div class="section-title">
-          <h2>Welcome To Sarkar Real Estate</h2>
-          <p>About Us</p>
-        </div>
-        <p class="about-text">
-          A destination where you can experience comfortable and peaceful living
-          close to nature with luxury apartments at Kalyani. Bask in its clean
-          pollution-free natural surroundings alongside abundance of green
-          spaces.
-        </p>
-        <p class="about-text">
-          What sets Sarkar Real Estate apart is its commitment to providing you
-          with a life of sheer opulence and comfort. Our flats for sale in
-          Kalyani have been meticulously designed to cater to your every need,
-          Imagine waking up to the gentle caress of a fresh breeze, as the first
-          rays of sunlight illuminate your spacious 2 BHK/3BHK flat, infusing it
-          with a warm glow.
-        </p>
-      </div>
-    </section>
-
-    <!-- NEW: Property / Plans Section -->
-    <section id="property" class="section bg-light">
-      <div class="container">
-        <div class="section-title">
-          <h2>Property Plans & Pricing</h2>
-          <p>Find your perfect home</p>
-        </div>
-        <div class="property-grid">
-          <!-- Property Card 1 -->
-          <div class="property-card">
-            <div class="property-img">
-              <img
-                src="./property1.jpg"
-                alt="2 BHK Apartment"
-              />
-            </div>
-            <div class="property-info">
-              <h3>2 BHK Luxury Apartment</h3>
-              <p>
-                Spacious 2 BHK flats with warm natural light, fresh breeze, and
-                modern contemporary design.
-              </p>
-              <ul class="property-features">
-                <li><i class="fas fa-ruler-combined"></i> 950 - 1100 Sq.Ft.</li>
-                <li><i class="fas fa-bed"></i> 2 Bedrooms</li>
-                <li><i class="fas fa-bath"></i> 2 Bathrooms</li>
-              </ul>
-              <a href="#contact" class="btn">Get Pricing</a>
-            </div>
+    <main>
+      <section class="hero" id="home">
+        <div class="hero-shade"></div>
+        <div class="container hero-content reveal">
+          <p class="hero-kicker">
+            <i class="fa-solid fa-circle-check"></i>Kalyani & Nadia property
+            marketplace
+          </p>
+          <h1>Search and list property with <em>local support</em></h1>
+          <p class="hero-copy">
+            Explore homes, rentals, commercial spaces and land—or post your own
+            property publicly in a few easy steps.
+          </p>
+          <div class="hero-actions">
+            <a class="button gold" href="#properties"
+              >Explore Properties <i class="fa-solid fa-arrow-right"></i></a
+            ><a class="button outline-light" href="#post-property"
+              >Post Property Free</a
+            ><a class="hero-contact-link" href="#contact"
+              >Contact us <i class="fa-solid fa-arrow-right"></i
+            ></a>
           </div>
-          <!-- Property Card 2 -->
-          <div class="property-card">
-            <div class="property-img">
-              <img
-                src="https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?auto=format&fit=crop&w=600&q=80"
-                alt="3 BHK Apartment"
-              />
-            </div>
-            <div class="property-info">
-              <h3>3 BHK Premium Apartment</h3>
-              <p>
-                Premium 3BHK open apartments offering ultimate comfort with
-                modern amenities.
-              </p>
-              <ul class="property-features">
-                <li>
-                  <i class="fas fa-ruler-combined"></i> 1300 - 1550 Sq.Ft.
-                </li>
-                <li><i class="fas fa-bed"></i> 3 Bedrooms</li>
-                <li><i class="fas fa-bath"></i> 3 Bathrooms</li>
-              </ul>
-              <a href="#contact" class="btn">Get Pricing</a>
-            </div>
-          </div>
-
-          <!-- Property Card 3 -->
-          <div class="property-card">
-            <div class="property-img">
-              <img src="./property3.jpg" alt="Plots" />
-            </div>
-            <div class="property-info">
-              <h3>Plots</h3>
-              <p>
-                Invest in Your Future make your dream place Premium Land and
-                affardable
-              </p>
-              <ul class="property-features">
-                <li>
-                  <i class="fas fa-ruler-combined"></i> starting 720 Sq.Ft.
-                </li>
-                <li><i class="fas fa-tree"></i> Green Space</li>
-                <li><i class="fas fa-road"></i> Wide access road</li>
-                <li><i class="fas fa-location-dot"></i>Kalyani</li>
-              </ul>
-              <a href="#contact" class="btn">Get Pricing</a>
-            </div>
-          </div>
-
-          <!-- Property Card 3 -->
-          <div class="property-card">
-            <div class="property-img">
-              <img src="./property4.jpg" alt="Plots" />
-            </div>
-            <div class="property-info">
-              <h3>Agriculture Plots</h3>
-              <p>
-                Invest in Your Future make your dream place Premium Land and
-                affardable
-              </p>
-              <ul class="property-features">
-                <li>
-                  <i class="fas fa-ruler-combined"></i> starting 720 Sq.Ft.
-                </li>
-                <li><i class="fas fa-tree"></i> Green Space</li>
-                <li><i class="fas fa-location-dot"></i>Kalyani</li>
-              </ul>
-              <a href="#contact" class="btn">Get Pricing</a>
-            </div>
+          <div class="hero-trust">
+            <span><i class="fa-solid fa-check"></i>Public owner listings</span
+            ><span><i class="fa-solid fa-check"></i>Photo upload</span
+            ><span><i class="fa-solid fa-check"></i>Direct owner contact</span>
           </div>
         </div>
-      </div>
-    </section>
-
-    <!-- Amenities Section -->
-    <section id="amenities" class="section">
-      <div class="container">
-        <div class="section-title">
-          <h2>Our Amenities</h2>
-          <p>Everything you need for a comfortable life</p>
-        </div>
-        <div class="amenities-grid">
-          <div class="amenity-card">
-            <i class="fas fa-faucet"></i>
-            <h3>24 Hrs Water Supply</h3>
-          </div>
-          <div class="amenity-card">
-            <i class="fas fa-elevator"></i>
-            <h3>Lift</h3>
-          </div>
-          <div class="amenity-card">
-            <i class="fas fa-shield-alt"></i>
-            <h3>Security Guard</h3>
-          </div>
-          <div class="amenity-card">
-            <i class="fas fa-users"></i>
-            <h3>Community Hall</h3>
-          </div>
-          <div class="amenity-card">
-            <i class="fas fa-child"></i>
-            <h3>Children Play Area</h3>
-          </div>
-          <div class="amenity-card">
-            <i class="fas fa-filter"></i>
-            <h3>Water Filtration</h3>
-          </div>
-          <div class="amenity-card">
-            <i class="fas fa-plug"></i>
-            <h3>Power Backup</h3>
-          </div>
-          <div class="amenity-card">
-            <i class="fas fa-recycle"></i>
-            <h3>Sewage Treatment</h3>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Why Choose Us -->
-    <section id="why-us" class="section bg-light">
-      <div class="container">
-        <div class="section-title">
-          <h2>Why Choose Us</h2>
-          <p>Experience the difference where comfort meets convenience</p>
-        </div>
-        <ul class="why-us-list">
-          <li>
-            <i class="fas fa-check-circle"></i> Pollution-free healthy
-            environment with complete serenity.
-          </li>
-          <li>
-            <i class="fas fa-check-circle"></i> Educational hub with public
-            utilities readily available in proximity.
-          </li>
-          <li>
-            <i class="fas fa-check-circle"></i> Locational advantage with proper
-            connectivity via transportation.
-          </li>
-          <li>
-            <i class="fas fa-check-circle"></i> Top-tier educational
-            opportunities right at your doorstep.
-          </li>
-          <li>
-            <i class="fas fa-check-circle"></i> Front-row seats to the city's
-            cultural offerings and heritage.
-          </li>
-          <li>
-            <i class="fas fa-check-circle"></i> A vibrant, interconnected
-            network sharing a passion for education and culture.
-          </li>
-          <li>
-            <i class="fas fa-check-circle"></i> A history of delivering
-            exceptional properties and unparalleled service.
-          </li>
-        </ul>
-      </div>
-    </section>
-
-    <!-- Testimonials -->
-    <section id="testimonials" class="section">
-      <div class="container">
-        <div class="section-title">
-          <h2>Group Members</h2>
-          <p>Testimonials</p>
-        </div>
-        <div class="testimonials-grid">
-          <!-- Member 1 -->
-          <div class="testimonial-card">
-            <img
-              src="./member1.jpeg"
-              alt="Sujoy Sarkar"
-              class="member-photo"
-            />
-            <p>
-              " Hi, I'm Sujoy Sarkar With over a decade of real estate
-              experience, I help families discover properties that match their
-              lifestyles perfectly. I prioritize transparent communication,
-              clean processes, and sharp local market navigation over aggressive
-              sales tactics, I'm CEO & Founder of Sarkar Real Estate"
-            </p>
-            <h4>- Sujoy Sarkar</h4>
-          </div>
-
-          <!-- Member 2 -->
-          <div class="testimonial-card">
-            <img src="your-image-2.jpg" alt="Employee 1" class="member-photo" />
-            <p>"Employee hire"</p>
-            <h4>- Bappa Bose</h4>
-          </div>
-
-          <!-- Member 3 -->
-          <div class="testimonial-card">
-            <img src="your-image-3.jpg" alt="Employee 2" class="member-photo" />
-            <p>"Employee hire"</p>
-            <h4>- #########</h4>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Fixed Right Side Enquire Button -->
-    <div class="fixed-right-cta">
-      <a
-        href="https://forms.gle/xMtgfS4RLRjXtM7f9"
-        target="_blank"
-        class="enquire-btn-fixed"
-      >
-        Enquire Now
-      </a>
-    </div>
-
-    <!-- Social Media Section -->
-    <section id="social" class="section">
-      <div class="container text-center">
-        <h3>Connect With Us</h3>
-        <div class="social-links">
-          <a
-            href="https://wa.me/917439632507"
-            target="_blank"
-            class="social-icon"
-            ><i class="fab fa-whatsapp"></i
-          ></a>
-          <a
-            href="https://www.facebook.com/profile.php?id=61592098061510"
-            target="_blank"
-            class="social-icon"
-            ><i class="fab fa-facebook-f"></i
-          ></a>
-          <a
-            href="https://www.instagram.com/sarkar.real.estate.11/"
-            target="_blank"
-            class="social-icon"
-            ><i class="fab fa-instagram"></i
-          ></a>
-          <a
-            href="http://www.linkedin.com/in/sujoysarkar11"
-            target="_blank"
-            class="social-icon"
+        <aside class="hero-note">
+          <i class="fa-solid fa-shield-halved"></i
+          ><span
+            ><small>Our promise</small
+            ><strong
+              >Practical guidance from first inquiry to final decision.</strong
+            ></span
           >
-            <i class="fab fa-linkedin-in"></i
+        </aside>
+      </section>
+
+      <section class="search-section" id="searchSection">
+        <div class="container">
+          <form class="property-search" id="propertySearch">
+            <div>
+              <label for="searchPurpose">Looking to</label
+              ><select id="searchPurpose">
+                <option value="all">Buy or Rent</option>
+                <option value="sale">Buy</option>
+                <option value="rent">Rent</option>
+              </select>
+            </div>
+            <div>
+              <label for="searchType">Property type</label
+              ><select id="searchType">
+                <option value="all">All types</option>
+                <option value="flat">Flat & Apartment</option>
+                <option value="house">Independent House</option>
+                <option value="land">Residential Land</option>
+                <option value="commercial">Commercial</option>
+                <option value="rental">Rental Property</option>
+                <option value="agricultural">Agricultural Land</option>
+              </select>
+            </div>
+            <div>
+              <label for="searchLocation">Location</label
+              ><select id="searchLocation">
+                <option value="all">All locations</option>
+                <option>Kalyani</option>
+                <option>Kanchrapara</option>
+                <option>Gayeshpur</option>
+                <option>Haringhata</option>
+                <option>Chakdaha</option>
+                <option>Ranaghat</option>
+              </select>
+            </div>
+            <div>
+              <label for="searchBudget">Maximum budget</label
+              ><select id="searchBudget">
+                <option value="all">Any budget</option>
+                <option value="1500000">Up to ₹15 Lakh</option>
+                <option value="3000000">Up to ₹30 Lakh</option>
+                <option value="5000000">Up to ₹50 Lakh</option>
+                <option value="10000000">Up to ₹1 Crore</option>
+              </select>
+            </div>
+            <button type="submit">
+              <i class="fa-solid fa-magnifying-glass"></i><span>Search</span>
+            </button>
+          </form>
+        </div>
+      </section>
+
+      <section class="marketplace-intro">
+        <div class="container marketplace-strip">
+          <div>
+            <i class="fa-solid fa-magnifying-glass"></i
+            ><span
+              ><strong>Easy discovery</strong
+              ><small>Buy, rent and land filters</small></span
+            >
+          </div>
+          <div>
+            <i class="fa-solid fa-upload"></i
+            ><span
+              ><strong>Complete photo gallery</strong
+              ><small>Up to 12 property photos</small></span
+            >
+          </div>
+          <div>
+            <i class="fa-brands fa-whatsapp"></i
+            ><span
+              ><strong>Local enquiries</strong
+              ><small>Call or WhatsApp support</small></span
+            >
+          </div>
+        </div>
+      </section>
+
+      <section class="section services-section" id="services">
+        <div class="container">
+          <div class="section-head reveal">
+            <div>
+              <p class="eyebrow">What we do</p>
+              <h2>Real estate support, shaped around your next move.</h2>
+            </div>
+            <p>
+              One local point of contact for property discovery, presentation,
+              coordination and informed next steps.
+            </p>
+          </div>
+          <div class="service-grid">
+            <article class="service-card reveal">
+              <i class="fa-solid fa-key"></i>
+              <div>
+                <h3>Property Buying Assistance</h3>
+                <p>
+                  Shortlist residential, commercial and land options matched to
+                  your location, budget and priorities.
+                </p>
+              </div>
+            </article>
+            <article class="service-card reveal">
+              <i class="fa-solid fa-indian-rupee-sign"></i>
+              <div>
+                <h3>Property Selling Assistance</h3>
+                <p>
+                  Position your property clearly, connect with relevant buyers
+                  and coordinate the selling journey.
+                </p>
+              </div>
+            </article>
+            <article class="service-card reveal">
+              <i class="fa-solid fa-house-user"></i>
+              <div>
+                <h3>Rental Services</h3>
+                <p>
+                  Support for houses, flats, shops, offices and other rental
+                  properties.
+                </p>
+              </div>
+            </article>
+            <article class="service-card reveal">
+              <i class="fa-solid fa-building"></i>
+              <div>
+                <h3>Residential Property</h3>
+                <p>
+                  Assistance with apartments, independent houses, villas and
+                  residential plots across the region.
+                </p>
+              </div>
+            </article>
+            <article class="service-card reveal">
+              <i class="fa-solid fa-shop"></i>
+              <div>
+                <h3>Commercial Property</h3>
+                <p>
+                  Practical guidance for shops, offices, warehouses, commercial
+                  buildings and investment spaces.
+                </p>
+              </div>
+            </article>
+            <article class="service-card reveal">
+              <i class="fa-solid fa-map"></i>
+              <div>
+                <h3>Land & Plot Services</h3>
+                <p>
+                  Discover or market residential, commercial and agricultural
+                  land with local-area context.
+                </p>
+              </div>
+            </article>
+            <article class="service-card reveal">
+              <i class="fa-solid fa-wallet"></i>
+              <div>
+                <h3>Property Valuation</h3>
+                <p>
+                  Market-based price guidance using location, condition,
+                  property size and current local demand.
+                </p>
+              </div>
+            </article>
+            <article class="service-card reveal">
+              <i class="fa-solid fa-camera"></i>
+              <div>
+                <h3>Property Marketing</h3>
+                <p>
+                  Present listings through professional photos, videos, social
+                  content and targeted online visibility.
+                </p>
+              </div>
+            </article>
+            <article class="service-card reveal">
+              <i class="fa-solid fa-clipboard-check"></i>
+              <div>
+                <h3>Property Listing Service</h3>
+                <p>
+                  Owners can submit complete property information and receive
+                  help preparing a clear listing.
+                </p>
+              </div>
+            </article>
+            <article class="service-card reveal">
+              <i class="fa-solid fa-calendar-check"></i>
+              <div>
+                <h3>Site Visit Assistance</h3>
+                <p>
+                  Coordinate convenient property visits for interested buyers,
+                  tenants and property owners.
+                </p>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section properties-section" id="properties">
+        <div class="container">
+          <div class="section-head reveal">
+            <div>
+              <p class="eyebrow">Property marketplace</p>
+              <h2>Explore owner listings and local property options.</h2>
+            </div>
+            <p>
+              Newly posted public listings appear automatically and remain
+              marked pending verification until reviewed.
+            </p>
+          </div>
+          <div class="filter-row" id="filterRow">
+            <button class="active" data-filter="all">All</button
+            ><button data-filter="flat">Flat & Apartment</button
+            ><button data-filter="house">Independent House</button
+            ><button data-filter="land">Residential Land</button
+            ><button data-filter="commercial">Commercial</button
+            ><button data-filter="rental">Rental</button
+            ><button data-filter="agricultural">Agricultural Land</button>
+          </div>
+          <div class="property-grid" id="propertyGrid"></div>
+          <div class="empty-state" id="emptyState" hidden>
+            <i class="fa-solid fa-house-circle-xmark"></i>
+            <h3>No matching property found</h3>
+            <p>Try a different location, category or budget.</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="section why-section" id="about">
+        <div class="container">
+          <div class="section-head compact reveal">
+            <div>
+              <p class="eyebrow">Why choose us</p>
+              <h2>Local help you can rely on</h2>
+            </div>
+          </div>
+          <div class="why-grid">
+            <article class="reveal">
+              <i class="fa-solid fa-location-crosshairs"></i>
+              <h3>Local expertise</h3>
+              <p>Focused knowledge of Kalyani and Nadia.</p>
+            </article>
+            <article class="reveal">
+              <i class="fa-solid fa-circle-check"></i>
+              <h3>Verified details</h3>
+              <p>Clearer information before site visits.</p>
+            </article>
+            <article class="reveal">
+              <i class="fa-solid fa-comments"></i>
+              <h3>Transparent support</h3>
+              <p>Direct communication at every stage.</p>
+            </article>
+            <article class="reveal">
+              <i class="fa-solid fa-headset"></i>
+              <h3>Quick response</h3>
+              <p>Fast phone and WhatsApp assistance.</p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section list-section" id="post-property">
+        <div class="container list-layout">
+          <div class="list-copy reveal">
+            <p class="eyebrow light">Owner listing</p>
+            <h2>Post your property</h2>
+            <p>
+              Submit complete property information. A newly submitted listing
+              will appear in the property section on this browser.
+            </p>
+            <ul>
+              <li>
+                <i class="fa-solid fa-check"></i>Add property details and owner
+                contact
+              </li>
+              <li>
+                <i class="fa-solid fa-check"></i>Upload front, back and interior
+                photos
+              </li>
+              <li>
+                <i class="fa-solid fa-check"></i>Receive direct phone and
+                WhatsApp enquiries
+              </li>
+            </ul>
+          </div>
+          <form class="listing-form reveal" id="listingForm">
+            <div class="form-grid">
+              <label
+                >Owner name<input name="ownerName" required maxlength="60"
+              /></label>
+              <label
+                >Phone number<input
+                  name="phone"
+                  required
+                  inputmode="tel"
+                  pattern="[0-9 +]{10,15}"
+                  placeholder="+91 98765 43210"
+              /></label>
+              <label
+                >Email address<input
+                  name="email"
+                  type="email"
+                  placeholder="name@example.com"
+              /></label>
+              <label
+                >Listing title<input
+                  name="title"
+                  required
+                  maxlength="140"
+                  placeholder="Example: 2BHK flat near Central Park"
+              /></label>
+              <label
+                >Property type<select name="type" required>
+                  <option value="">Select type</option>
+                  <option value="flat">Flat & Apartment</option>
+                  <option value="house">Independent House</option>
+                  <option value="land">Residential Land</option>
+                  <option value="commercial">Commercial Property</option>
+                  <option value="rental">Rental Property</option>
+                  <option value="agricultural">Agricultural Land</option>
+                </select></label
+              >
+              <label
+                >Purpose<select name="purpose" required>
+                  <option value="sale">Sell</option>
+                  <option value="rent">Rent</option>
+                </select></label
+              >
+              <label
+                >Location<input
+                  name="location"
+                  required
+                  placeholder="Kalyani, Nadia"
+              /></label>
+              <label
+                >Expected price / rent<input
+                  name="price"
+                  required
+                  inputmode="numeric"
+                  placeholder="2500000"
+              /></label>
+              <label
+                >Property size<input
+                  name="area"
+                  required
+                  inputmode="numeric"
+                  placeholder="1200"
+              /></label>
+              <label
+                >Size unit<select name="areaUnit" required>
+                  <option>sq. ft.</option>
+                  <option>katha</option>
+                  <option>bigha</option>
+                  <option>acre</option>
+                </select></label
+              >
+              <label
+                >Bedrooms<input
+                  name="beds"
+                  type="number"
+                  min="0"
+                  max="20"
+                  value="2"
+              /></label>
+              <label
+                >Bathrooms<input
+                  name="baths"
+                  type="number"
+                  min="0"
+                  max="20"
+                  value="2"
+              /></label>
+              <label
+                >Kitchens<input
+                  name="kitchens"
+                  type="number"
+                  min="0"
+                  max="10"
+                  value="1"
+              /></label>
+              <label
+                >Balconies<input
+                  name="balconies"
+                  type="number"
+                  min="0"
+                  max="20"
+                  value="0"
+              /></label>
+              <label
+                >Furnishing<select name="furnishing">
+                  <option value="">Select furnishing</option>
+                  <option>Unfurnished</option>
+                  <option>Semi-furnished</option>
+                  <option>Fully furnished</option>
+                </select></label
+              >
+              <label
+                >Parking<select name="parking">
+                  <option value="">Select parking</option>
+                  <option>No parking</option>
+                  <option>Two-wheeler parking</option>
+                  <option>Open car parking</option>
+                  <option>Covered car parking</option>
+                </select></label
+              >
+              <label
+                >Floor details<input
+                  name="floor"
+                  maxlength="80"
+                  placeholder="Example: 2nd floor of 4"
+              /></label>
+              <label
+                >Property age<input
+                  name="age"
+                  maxlength="60"
+                  placeholder="Example: New / 5 years"
+              /></label>
+              <label class="full"
+                >Google Maps location<input
+                  name="mapLocation"
+                  type="url"
+                  placeholder="Paste a Google Maps link"
+              /></label>
+              <label class="full"
+                >Amenities & features<textarea
+                  name="amenities"
+                  rows="3"
+                  placeholder="Lift, security, power backup, water supply, terrace"
+                ></textarea>
+              </label>
+              <label class="full"
+                >Property photos (up to 12)<input
+                  name="photos"
+                  type="file"
+                  accept="image/*"
+                  multiple
+              /></label>
+              <label class="full"
+                >Description<textarea
+                  name="description"
+                  rows="4"
+                  required
+                  placeholder="Road access, floor, kitchen, parking, furnishing and other useful details"
+                ></textarea>
+              </label>
+            </div>
+            <label class="consent-row"
+              ><input type="checkbox" required /><span
+                >I confirm that I am authorized to list this property and that
+                the information is accurate.</span
+              ></label
+            >
+            <label class="consent-row"
+              ><input type="checkbox" required /><span
+                >I agree that my owner name and phone number will be shown
+                publicly for direct enquiries.</span
+              ></label
+            >
+            <p class="form-note">
+              The static version stores listing data only in this browser.
+              Connect a secure backend before using it for production records.
+            </p>
+            <button class="button gold" type="submit">
+              <i class="fa-solid fa-paper-plane"></i>Submit Property
+            </button>
+            <div
+              class="success-message"
+              id="listingSuccess"
+              role="status"
+              hidden
+            >
+              <i class="fa-solid fa-circle-check"></i>Your property has been
+              added successfully.
+            </div>
+          </form>
+        </div>
+      </section>
+
+      <section class="section testimonials-section" id="testimonials">
+        <div class="container testimonial-layout">
+          <div class="reveal">
+            <p class="eyebrow">Client testimonials</p>
+            <h2>Read our verified Google feedback.</h2>
+            <p>
+              The latest public ratings and client comments remain on the
+              official Google profile, so you always see the current source.
+            </p>
+            <div class="review-actions">
+              <a
+                class="button outline-dark"
+                href="https://share.google/hGC7ZyOl9nq33Mpo5"
+                target="_blank"
+                rel="noopener"
+                ><i class="fa-solid fa-star"></i>View Google Reviews</a
+              ><a
+                class="text-link"
+                href="https://share.google/hGC7ZyOl9nq33Mpo5"
+                target="_blank"
+                rel="noopener"
+                >Write a Google Review <i class="fa-solid fa-arrow-right"></i
+              ></a>
+            </div>
+          </div>
+          <a
+            class="google-review-card reveal"
+            href="https://share.google/hGC7ZyOl9nq33Mpo5"
+            target="_blank"
+            rel="noopener"
+            ><div class="google-provider">
+              <span>G</span><strong>Google Reviews</strong>
+            </div>
+            <div class="review-stars">★★★★★</div>
+            <h3>See current ratings and customer reviews</h3>
+            <p>
+              Open the official Google listing to read the latest verified
+              feedback and location details.
+            </p>
+            <strong class="google-open"
+              >Open Google profile
+              <i class="fa-solid fa-arrow-right"></i></strong
           ></a>
         </div>
-      </div>
-    </section>
+      </section>
 
-    <!-- Footer with Background Image -->
-    <footer id="contact" class="footer-bg">
+      <section class="section faq-section" id="faq">
+        <div class="container faq-layout">
+          <div class="reveal">
+            <p class="eyebrow">FAQ</p>
+            <h2>Helpful answers</h2>
+            <p>
+              Important information before listing, visiting or choosing a
+              property.
+            </p>
+          </div>
+          <div class="faq-list reveal" id="faqList">
+            <article>
+              <button>
+                How are brokerage and service charges decided?<i
+                  class="fa-solid fa-plus"
+                ></i>
+              </button>
+              <p>
+                Charges depend on the property type and service required. The
+                applicable fee should be discussed and confirmed clearly before
+                any paid service begins.
+              </p>
+            </article>
+            <article>
+              <button>
+                Can I schedule a property visit?<i class="fa-solid fa-plus"></i>
+              </button>
+              <p>
+                Yes. Share the property you are interested in and your preferred
+                time. The visit will be coordinated with the owner or authorized
+                contact.
+              </p>
+            </article>
+            <article>
+              <button>
+                How can an owner list a property?<i
+                  class="fa-solid fa-plus"
+                ></i>
+              </button>
+              <p>
+                Complete the List Your Property form with accurate details,
+                photos and location. The information should be verified before
+                public promotion.
+              </p>
+            </article>
+            <article>
+              <button>
+                Which documents may be required?<i class="fa-solid fa-plus"></i>
+              </button>
+              <p>
+                Requirements vary by property and transaction. Final legal
+                verification must be done by a qualified legal professional.
+              </p>
+            </article>
+            <article>
+              <button>
+                Do you help with rental agreements?<i
+                  class="fa-solid fa-plus"
+                ></i>
+              </button>
+              <p>
+                General coordination support can be provided. The final
+                agreement should be prepared or reviewed by an appropriate legal
+                professional.
+              </p>
+            </article>
+            <article>
+              <button>
+                Are all properties independently verified?<i
+                  class="fa-solid fa-plus"
+                ></i>
+              </button>
+              <p>
+                Basic information can be checked, but buyers and tenants should
+                complete independent legal, physical and financial due
+                diligence.
+              </p>
+            </article>
+            <article>
+              <button>
+                Is home-loan approval guaranteed?<i
+                  class="fa-solid fa-plus"
+                ></i>
+              </button>
+              <p>
+                No. General process guidance may be offered, while eligibility
+                and approval remain entirely with the selected financial
+                institution.
+              </p>
+            </article>
+            <article>
+              <button>
+                Which areas do you cover?<i class="fa-solid fa-plus"></i>
+              </button>
+              <p>
+                Kalyani, Kanchrapara, Gayeshpur, Haringhata, Chakdaha, Ranaghat,
+                Krishnanagar and other parts of Nadia District.
+              </p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="contact-section" id="contact">
+        <div class="container contact-layout">
+          <div class="contact-copy reveal">
+            <p class="eyebrow light">Contact us</p>
+            <h2>Let’s discuss your property requirement.</h2>
+            <p>
+              Share what you want to buy, sell or rent, and the area you are
+              considering.
+            </p>
+            <div class="contact-cards">
+              <a href="tel:+917439632507"
+                ><i class="fa-solid fa-phone"></i
+                ><span>Call<strong>+91 74396 32507</strong></span></a
+              ><a
+                href="https://wa.me/917439632507"
+                target="_blank"
+                rel="noopener"
+                ><i class="fa-brands fa-whatsapp"></i
+                ><span>WhatsApp<strong>+91 74396 32507</strong></span></a
+              ><a href="mailto:sarkarrealestate11@gmail.com"
+                ><i class="fa-solid fa-envelope"></i
+                ><span
+                  >Email<strong>sarkarrealestate11@gmail.com</strong></span
+                ></a
+              ><a
+                href="https://share.google/hGC7ZyOl9nq33Mpo5"
+                target="_blank"
+                rel="noopener"
+                ><i class="fa-solid fa-location-dot"></i
+                ><span
+                  >Service area & location<strong
+                    >Kalyani, Nadia, West Bengal</strong
+                  ></span
+                ></a
+              >
+              <div>
+                <i class="fa-solid fa-clock"></i
+                ><span
+                  >Business hours<strong
+                    >Sunday–Saturday, 9:00 AM–8:00 PM</strong
+                  ></span
+                >
+              </div>
+            </div>
+          </div>
+          <form class="contact-form reveal" id="contactForm">
+            <small>Property enquiry</small>
+            <h3>How can we help?</h3>
+            <label
+              >Your name<input
+                name="name"
+                required
+                placeholder="Full name" /></label
+            ><label
+              >Phone number<input
+                name="phone"
+                required
+                inputmode="tel"
+                placeholder="Mobile number" /></label
+            ><label
+              >Email address<input
+                name="email"
+                type="email"
+                required
+                placeholder="Email address" /></label
+            ><label
+              >I want to<select name="requirement" required>
+                <option value="">Select a requirement</option>
+                <option>Buy a property</option>
+                <option>Sell a property</option>
+                <option>Rent a property</option>
+                <option>List a property</option>
+                <option>Book a site visit</option>
+                <option>Request a consultation</option>
+              </select></label
+            ><label
+              >Message<textarea
+                name="message"
+                required
+                rows="5"
+                placeholder="Property type, preferred area, budget and timeline"
+              ></textarea></label
+            ><button class="button navy" type="submit">
+              Send Enquiry <i class="fa-solid fa-paper-plane"></i>
+            </button>
+            <div
+              class="success-message"
+              id="contactSuccess"
+              role="status"
+              hidden
+            >
+              Thank you. Your enquiry has been recorded on this browser.
+            </div>
+          </form>
+        </div>
+        <div class="map-frame">
+          <iframe
+            title="Map of Kalyani, Nadia, West Bengal"
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"
+            src="https://www.google.com/maps?q=Kalyani%2C%20Nadia%2C%20West%20Bengal&output=embed"
+          ></iframe>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
       <div class="container footer-grid">
-        <div class="footer-about">
-          <h3>Sarkar Real Estate</h3>
+        <div class="footer-brand">
+          <a class="footer-logo-panel" href="index.html"
+            ><img src="assets/logo.png" alt="Sarkar Real Estate"
+          /></a>
           <p>
-            A destination where you can experience comfortable and peaceful
-            living close to nature with luxury apartments at the heart of
-            Kalyani.
+            Local property assistance for buying, selling and renting across
+            Kalyani and Nadia District.
           </p>
+          <div class="socials">
+            <a
+              href="https://www.facebook.com/share/1BxqBDmVtk/"
+              target="_blank"
+              rel="noopener"
+              aria-label="Facebook"
+              ><i class="fa-brands fa-facebook-f"></i></a
+            ><a
+              href="https://www.instagram.com/sarkar.real.estate.11/"
+              target="_blank"
+              rel="noopener"
+              aria-label="Instagram"
+              ><i class="fa-brands fa-instagram"></i></a
+            ><a
+              href="https://www.linkedin.com/in/sarkarrealestate11"
+              target="_blank"
+              rel="noopener"
+              aria-label="LinkedIn"
+              ><i class="fa-brands fa-linkedin-in"></i></a
+            ><a
+              href="https://share.google/hGC7ZyOl9nq33Mpo5"
+              target="_blank"
+              rel="noopener"
+              aria-label="Google business location"
+              ><i class="fa-brands fa-google"></i
+            ></a>
+          </div>
         </div>
-        <div class="footer-links">
+        <div>
           <h3>Quick Links</h3>
-          <ul>
-            <li><a href="#home">Home</a></li>
-            <li><a href="#about">About us</a></li>
-            <li><a href="#property">Plans & Pricing</a></li>
-            <li><a href="#amenities">Amenities</a></li>
-            <li><a href="#">Privacy Policy</a></li>
-          </ul>
+          <a href="index.html">Home</a><a href="team.html">Team</a
+          ><a href="index.html#properties">Buy / Rent</a
+          ><a href="index.html#contact">Contact</a>
         </div>
-        <div class="footer-contact">
-          <h3>Get In Touch</h3>
-          <p>
-            <i class="fas fa-map-marker-alt"></i> Kalyani, Nadia, 741235, West
-            Bengal, India
-          </p>
-          <p><i class="fas fa-phone"></i> +91 7439632507</p>
-          <p><i class="fas fa-envelope"></i> sarkarrealestate@gmail.com</p>
+        <div>
+          <h3>Property Types</h3>
+          <a href="#properties">Flat & Apartment</a
+          ><a href="#properties">Independent House</a
+          ><a href="#properties">Land & Plot</a
+          ><a href="#properties">Commercial</a>
+        </div>
+        <div>
+          <h3>Owner Services</h3>
+          <a href="area.html">Areas We Serve</a
+          ><a href="index.html#post-property">Post Property</a
+          ><a href="team.html">Owner Profile</a
+          ><a href="index.html#contact">Contact</a>
+        </div>
+        <div>
+          <h3>Contact</h3>
+          <a href="tel:+917439632507">+91 74396 32507</a
+          ><a href="mailto:sarkarrealestate11@gmail.com"
+            >sarkarrealestate11@gmail.com</a
+          ><span>Kalyani, Nadia, West Bengal</span
+          ><span>Sun–Sat · 9 AM–8 PM</span>
         </div>
       </div>
-      <div class="copyright">
-        <p>Copyright &copy; 2026 All Rights Reserved by Sarkar Real Estate</p>
+      <div class="container legal-note">
+        <p>
+          <strong>Disclaimer:</strong> Property information and prices must be
+          verified independently. Documentation and home-loan content is general
+          guidance, not legal or financial advice.
+        </p>
+        <div>
+          <a href="#">Privacy Policy</a><a href="#">Terms & Conditions</a
+          ><a href="#">Disclaimer</a>
+        </div>
+      </div>
+      <div class="container copyright">
+        <span>© 2026 Sarkar Real Estate. All rights reserved.</span
+        ><span>Designed for Kalyani & Nadia</span>
       </div>
     </footer>
 
+    <div
+      class="property-modal"
+      id="propertyModal"
+      role="dialog"
+      aria-modal="true"
+      aria-labelledby="modalTitle"
+      hidden
+    >
+      <div class="modal-backdrop" data-close-modal></div>
+      <div class="modal-panel">
+        <button
+          class="modal-close"
+          data-close-modal
+          aria-label="Close property details"
+        >
+          <i class="fa-solid fa-xmark"></i>
+        </button>
+        <div class="modal-heading">
+          <p id="modalLocation"></p>
+          <h2 id="modalTitle"></h2>
+        </div>
+        <div class="gallery-stage" id="galleryStage">
+          <img id="galleryImage" alt="" /><button
+            class="gallery-arrow prev"
+            id="galleryPrev"
+            aria-label="Previous property photo"
+          >
+            <i class="fa-solid fa-chevron-left"></i></button
+          ><button
+            class="gallery-arrow next"
+            id="galleryNext"
+            aria-label="Next property photo"
+          >
+            <i class="fa-solid fa-chevron-right"></i></button
+          ><span id="galleryCount"></span>
+        </div>
+        <div class="gallery-thumbs" id="galleryThumbs"></div>
+        <div class="modal-body">
+          <p id="modalDescription"></p>
+          <div class="modal-facts" id="modalFacts"></div>
+          <div class="modal-owner" id="modalOwner"></div>
+          <div class="modal-actions">
+            <a id="modalCall" class="button outline-dark"
+              ><i class="fa-solid fa-phone"></i>Call Owner</a
+            ><a
+              id="modalWhatsapp"
+              class="button navy"
+              target="_blank"
+              rel="noopener"
+              ><i class="fa-brands fa-whatsapp"></i>WhatsApp</a
+            >
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <a
+      class="floating-call"
+      href="tel:+917439632507"
+      aria-label="Call Sarkar Real Estate"
+      ><i class="fa-solid fa-phone"></i
+    ></a>
+    <a
+      class="floating-whatsapp"
+      href="https://wa.me/917439632507"
+      target="_blank"
+      rel="noopener"
+      aria-label="WhatsApp Sarkar Real Estate"
+      ><i class="fa-brands fa-whatsapp"></i
+    ></a>
+    <button class="scroll-top" id="scrollTop" aria-label="Scroll to top">
+      <i class="fa-solid fa-arrow-up"></i>
+    </button>
     <script src="script.js"></script>
   </body>
 </html>
